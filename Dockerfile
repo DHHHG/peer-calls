@@ -30,6 +30,7 @@ WORKDIR /src
 
 RUN set -ex \
  && go mod download
+RUN apk add --no-cache bash
 
 # Add the application itself and build it
 COPY                  ./          /src/
